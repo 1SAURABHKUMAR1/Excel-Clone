@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel | Clone</title>
+    <link rel="shortcut icon" href="https://ssl.gstatic.com/docs/spreadsheets/favicon3.ico" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- top nav bar  -->
+
+    <div class="navigation-bar">
+        <span class="navigation-single active">Home</span>
+        <span class="navigation-single">File</span>
+        <span class="navigation-single">Insert</span>
+        <span class="navigation-single">Layout</span>
+        <span class="navigation-single">Help</span>
+    </div>
+
+
+    <!-- tool bar  -->
+
+    <div class="toolbar-container">
+
+        <span class="material-icons">
+            content_copy
+        </span>
+        <span class="material-icons">
+            content_cut
+        </span>
+        <span class="material-icons-outlined">
+            content_paste
+        </span>
+
+        <select name="" id="" class="select font">
+            <option value="monospace">Monospace</option>
+            <option value="arial">Arial</option>
+            <option value="montserrat">Montserrat</option>
+            <option value="roboto">Roboto</option>
+        </select>
+
+        <select name="" id="" class="select font-size">
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+            <option value="35">35</option>
+        </select>
+
+        <span class="material-icons-outlined">
+            format_bold
+        </span>
+        <span class="material-icons-outlined">
+            format_italic
+        </span>
+        <span class="material-icons-outlined">
+            format_underline
+        </span>
+        <span class="material-icons-outlined">
+            format_align_left
+        </span>
+        <span class="material-icons-outlined">
+            format_align_center
+        </span>
+        <span class="material-icons-outlined">
+            format_align_right
+        </span>
+
+    </div>
+
+    <!-- formula and cell container  -->
+
+    <div class="formula-and-cell-container">
+
+        <div class="address-bar" spellcheck="false"></div>
+
+        <span class="formula-icon">
+            <img src="https://img.icons8.com/ios-glyphs/50/000000/formula-fx.png" />
+        </span>
+
+        <input type="text" class="formula-bar">
+
+    </div>
+
+    <!-- all cell container  -->
+
+    <div class="cell-row-column-container">
+
+        <div class="left-dummy-box">
+            <div class="dummy-box"></div>
+        </div>
+        <div class="row-address-container"></div>
+        <div class="cells-container">
+            <div class="col-address-container"></div>
+        </div>
+
+    </div>
+
+
+    <!-- sheet container  -->
+
+    <div class="sheet-container">
+
+        <span class="material-icons sheet-icon">
+            post_add
+        </span>
+        <span class="sheet-list active-sheet">Sheet 1</span>
+
+    </div>
+
+    <script src="./CellRowAdder.js"></script>
+
+</body>
+
+</html>
