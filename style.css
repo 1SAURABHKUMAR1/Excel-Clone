@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;170;200;271;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -54,6 +56,7 @@ body {
   padding: 0.5rem 1.4rem;
   overflow-x: auto;
   column-gap: 1.2rem;
+  position: relative;
 }
 
 .toolbar-container::-webkit-scrollbar {
@@ -90,6 +93,12 @@ option {
   border-radius: 0.2rem;
 }
 
+.toolbar-container .color .color-hide {
+  max-width: 1.5rem;
+  position: absolute;
+  opacity: 0;
+}
+
 /* formula cell  */
 
 .formula-and-cell-container {
@@ -98,7 +107,7 @@ option {
   background-color: var(--mid-grey);
   border-bottom: var(--active-grey) 1px solid;
   display: flex;
-  padding: 0.7rem 1.4rem;
+  padding: 0.52rem 1.4rem;
   align-items: center;
   column-gap: 1.3rem;
   overflow: scroll;
@@ -110,6 +119,7 @@ option {
   background-color: #fff;
   height: 1.9rem;
   width: 4rem;
+  font-size: 1.2rem;
   padding: 0.3rem 0.5rem;
   outline: none;
   overflow: hidden;
@@ -137,7 +147,7 @@ option {
   max-width: 60rem;
   outline: none;
   padding: 0.2rem 0.5rem;
-  min-width: 20rem;
+  min-width: 17.5rem;
 }
 
 .formula-and-cell-container::-webkit-scrollbar {
@@ -162,6 +172,7 @@ option {
   position: sticky;
   z-index: 10;
   padding: 0.3rem;
+  background-color: var(--mid-grey);
   border-bottom: 1px solid var(--active-grey);
   border-right: 1px solid var(--active-grey);
 }
@@ -176,8 +187,9 @@ option {
 /* container that hold address of all row  */
 
 .row-address-container {
-  left: 0;
   position: sticky;
+  top: 2rem;
+  left: 0;
 }
 
 /* container that hold cells and address of column  */
@@ -206,6 +218,7 @@ option {
   padding: 0.4rem;
   text-align: center;
   z-index: 5;
+  background-color: var(--mid-grey);
 }
 
 .single-row-number:hover {
@@ -222,6 +235,7 @@ option {
   padding: 0.4rem;
   text-align: center;
   z-index: 5;
+  background-color: var(--mid-grey);
 }
 
 .single-column-number:hover {
@@ -245,7 +259,7 @@ option {
 }
 
 .active-cell {
-  outline: 2px solid var(--excel-green);
+  border: 2px solid var(--excel-green);
 }
 
 /* custom scroll bar  */
@@ -298,6 +312,11 @@ option {
 }
 
 .sheet-container > span:hover {
+  background-color: var(--hover-grey);
+  border-radius: 0.2rem;
+}
+
+.sheet-container-active {
   background-color: var(--hover-grey);
   border-radius: 0.2rem;
 }

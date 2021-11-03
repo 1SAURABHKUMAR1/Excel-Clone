@@ -30,49 +30,64 @@
 
     <div class="toolbar-container">
 
-        <span class="material-icons">
+        <span class="material-icons copy-button">
             content_copy
         </span>
-        <span class="material-icons">
+        <span class="material-icons cut-button">
             content_cut
         </span>
-        <span class="material-icons-outlined">
+        <span class="material-icons-outlined paste-button">
             content_paste
         </span>
 
-        <select name="" id="" class="select font">
-            <option value="monospace">Monospace</option>
-            <option value="arial">Arial</option>
-            <option value="montserrat">Montserrat</option>
-            <option value="roboto">Roboto</option>
+        <select name="" id="" class="select font-style">
+            <option value="Inter">Inter</option>
+            <option value="Roboto">Roboto</option>
+            <option value="Montserrat">Montserrat</option>
+            <option value="Sans">Open Sans</option>
+            <option value="Oswald">Oswald</option>
+            <option value="Poppins">Popins</option>
         </select>
 
         <select name="" id="" class="select font-size">
-            <option value="15">15</option>
-            <option value="20">20</option>
+            <option value="14">14</option>
+            <option value="17">17</option>
+            <option value="19">19</option>
+            <option value="21">21</option>
+            <option value="23">23</option>
             <option value="25">25</option>
-            <option value="30">30</option>
-            <option value="35">35</option>
         </select>
 
-        <span class="material-icons-outlined">
+        <span class="material-icons-outlined bold-button">
             format_bold
         </span>
-        <span class="material-icons-outlined">
+        <span class="material-icons-outlined italic-button">
             format_italic
         </span>
-        <span class="material-icons-outlined">
+        <span class="material-icons-outlined underline-button">
             format_underline
         </span>
-        <span class="material-icons-outlined">
+        <span class="material-icons-outlined left alignment sheet-container-active">
             format_align_left
         </span>
-        <span class="material-icons-outlined">
+        <span class="material-icons-outlined center alignment">
             format_align_center
         </span>
-        <span class="material-icons-outlined">
+        <span class="material-icons-outlined right alignment">
             format_align_right
         </span>
+        <div class="color">
+            <input type="color" name="" class="color-hide font-color" id="">
+            <span class="material-icons">
+                format_color_text
+            </span>
+        </div>
+        <div class="color">
+            <input type="color" name="" class="color-hide background-color" id="">
+            <span class="material-icons">
+                format_color_fill
+            </span>
+        </div>
 
     </div>
 
@@ -80,7 +95,7 @@
 
     <div class="formula-and-cell-container">
 
-        <div class="address-bar" spellcheck="false"></div>
+        <input class="address-bar" spellcheck="false">
 
         <span class="formula-icon">
             <img src="https://img.icons8.com/ios-glyphs/50/000000/formula-fx.png" />
@@ -116,8 +131,16 @@
 
     </div>
 
-    <script src="./CellRowAdder.js"></script>
-
+    <!-- js to make cells  -->
+    <script src="./Script/CellRowMake.js"></script>
+    <!-- js to store different  cell data -->
+    <script src="./Script/CellStorage.js"></script>
+    <!-- js to style different cells  -->
+    <script src="./Script/StylingCell.js"></script>
+    <!-- cells to change tool bar acoording to cells  -->
+    <script src="./Script/DifferentCellDifferentToolAttach.js"></script>
+    <!-- js to calculate formula  -->
+    <script src="./Script/Formula.js"></script>
 </body>
 
 </html>
