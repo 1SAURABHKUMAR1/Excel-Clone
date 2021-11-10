@@ -13,7 +13,9 @@ for (let i = 1; i <= rowTotal; i++) {
             fontFamily: 'Inter',
             fontSize: '14',
             fontColor: '#000000',
-            backgroundColor: '#f9fafbz'
+            backgroundColor: '#f9fafb',
+            value: '',
+            formula: '',
         }
         sheetRow.push(cellProperties);
     }

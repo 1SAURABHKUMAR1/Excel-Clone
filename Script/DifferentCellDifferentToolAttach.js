@@ -3,6 +3,9 @@ var allCells = document.querySelectorAll('.cell');
 //  function to chnage toolbar for every cell
 for (let i = 0; i <= allCells.length; i++) {
     addEventListenerToCell(allCells[i]);
+
+    // function for forumla event listener
+    addEventListenerFormula(allCells[i]);
 }
 
 // funcition to change toolbar
@@ -62,6 +65,12 @@ function addEventListenerToCell(cell) {
 
         // background color
         backgroundColor.value = cellStorage.backgroundColor;
+
+        // chnage formula bar for every cell
+        formulaBar.value = cellStorage.formula;
+
+        // manage Local Storage
+        manageLocalStorage();
     })
 }
 

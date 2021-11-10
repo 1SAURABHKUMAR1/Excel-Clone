@@ -5,6 +5,10 @@ var rowContainer = document.querySelector('.row-address-container')
 var columnContainer = document.querySelector('.col-address-container')
 var cellsContainer = document.querySelector('.cells-container')
 var cellAddressBar = document.querySelector('.address-bar');
+var formulaBar = document.querySelector('.formula-bar');
+var copyButton = document.querySelector('.copy-button');
+var cutButton = document.querySelector('.cut-button');
+var pasteButton = document.querySelector('.paste-button');
 
 // function to add row numbers  
 
@@ -111,4 +115,10 @@ function findRowAndCol(address) {
 window.onload = function () {
     focusOnCell('A1');
     cellAddressBar.value = `${String.fromCharCode(65)}${1}`;
+}
+
+
+// manage local storage
+function manageLocalStorage() {
+    localStorage.setItem('sheet', JSON.stringify(sheetDataBase));
 }
