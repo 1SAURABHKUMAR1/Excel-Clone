@@ -1,14 +1,29 @@
 // button for copy
 copyButton.addEventListener('click', () => {
+    let [cellUi, cellStorage] = uiAndDatabaseOfCell(cellAddressBar.value);
 
+    let text = cellUi.innerText;
+    navigator.clipboard.writeText(text);
 })
 
 // button to cut
 cutButton.addEventListener('click', () => {
+    let [cellUi, cellStorage] = uiAndDatabaseOfCell(cellAddressBar.value);
 
+    let text = cellUi.innerText;
+    navigator.clipboard.writeText(text);
+    cellUi.innerText = '';
 })
 
 // button for paste
 pasteButton.addEventListener('click', () => {
+    let [cellUi, cellStorage] = uiAndDatabaseOfCell(cellAddressBar.value);
 
+    navigator.clipboard.readText()
+        .then(text => {
+            cellUi.innerText = text;
+        })
+        .catch(err => {
+            console.log(err);
+        })
 })
