@@ -11,7 +11,7 @@ for (let i = 1; i <= rowTotal; i++) {
             underline: false,
             textAlign: 'left',
             fontFamily: 'Inter',
-            fontSize: '14',
+            fontSize: '16',
             fontColor: '#000000',
             backgroundColor: '#f9fafb',
             value: '',

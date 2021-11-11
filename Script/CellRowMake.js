@@ -9,6 +9,7 @@ var formulaBar = document.querySelector('.formula-bar');
 var copyButton = document.querySelector('.copy-button');
 var cutButton = document.querySelector('.cut-button');
 var pasteButton = document.querySelector('.paste-button');
+var deleteButton = document.querySelector('.delete-button');
 
 // function to add row numbers  
 

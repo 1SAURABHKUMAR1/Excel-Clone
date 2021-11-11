@@ -13,7 +13,6 @@ formulaBar.addEventListener('keypress', (event) => {
 
     if ((event.key == 'Enter' || event.keyCode == 13) && formulaBarValue) {
         if (formulaBarValue.includes('=')) {
-            console.log('includes')
             let value = evaluateFormula(formulaBarValue)
             if (value) {
                 changeValueCell(value, formulaBarValue);
@@ -25,8 +24,7 @@ formulaBar.addEventListener('keypress', (event) => {
 
 // eveluate function
 function evaluateFormula(value) {
-    let formula = value.slice(1);
-
+    let formula = value.slice(1).toUpperCase();
     // check if formula contains dependency of any child cell
 
     if (/[A-Z]/.test(formula)) {
@@ -43,6 +41,7 @@ function evaluateFormula(value) {
 
             }
         }
+
         return eval(formula);
     }
     else {
