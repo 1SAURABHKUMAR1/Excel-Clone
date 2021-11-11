@@ -13,6 +13,7 @@ cutButton.addEventListener('click', () => {
     let text = cellUi.innerText;
     navigator.clipboard.writeText(text);
     cellUi.innerText = '';
+    cellStorage.value = '';
 })
 
 // button for paste
@@ -22,6 +23,7 @@ pasteButton.addEventListener('click', () => {
     navigator.clipboard.readText()
         .then(text => {
             cellUi.innerText = text;
+            cellStorage.value = text;
         })
         .catch(err => {
             console.log(err);
