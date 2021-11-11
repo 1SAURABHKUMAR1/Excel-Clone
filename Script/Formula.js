@@ -8,13 +8,16 @@ function addEventListenerFormula(cell) {
 
 
 // formula bar value on enter clicked
-formulaBar.addEventListener('keydown', (event) => {
+formulaBar.addEventListener('keypress', (event) => {
     let formulaBarValue = formulaBar.value;
 
-    if (event.key == 'Enter' && formulaBarValue) {
-        let value = evaluateFormula(formulaBarValue)
-        if (value) {
-            changeValueCell(value, formulaBarValue);
+    if ((event.key == 'Enter' || event.keyCode == 13) && formulaBarValue) {
+        if (formulaBarValue.includes('=')) {
+            console.log('includes')
+            let value = evaluateFormula(formulaBarValue)
+            if (value) {
+                changeValueCell(value, formulaBarValue);
+            }
         }
     }
 
