@@ -61,4 +61,7 @@ function changeValueCell(evaluatedValue, formula) {
     // change storage of cell
     cellStorage.value = evaluatedValue;
     cellStorage.formula = formula;
+
+    // manage Local Storage
+    manageLocalStorage();
 }

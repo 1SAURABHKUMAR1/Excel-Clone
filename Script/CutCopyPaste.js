@@ -14,6 +14,10 @@ cutButton.addEventListener('click', () => {
     navigator.clipboard.writeText(text);
     cellUi.innerText = '';
     cellStorage.value = '';
+    cellStorage.formula = '';
+
+    // manage Local Storage
+    manageLocalStorage();
 })
 
 // button for paste

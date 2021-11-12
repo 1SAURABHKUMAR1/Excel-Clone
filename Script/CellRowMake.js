@@ -11,6 +11,7 @@ var cutButton = document.querySelector('.cut-button');
 var pasteButton = document.querySelector('.paste-button');
 var deleteButton = document.querySelector('.delete-button');
 
+
 // function to add row numbers  
 
 for (let i = 1; i <= rowTotal; i++) {
@@ -62,7 +63,6 @@ function displayCellToAddressBar(cell, i, j) {
 
 
 // a function to add outline to cell 
-
 var allCells = document.querySelectorAll('.cell');
 
 function addOutlineCell(cell) {
@@ -75,7 +75,6 @@ function addOutlineCell(cell) {
 }
 
 // event listener to focus on cell given addreess
-
 cellAddressBar.addEventListener('keydown', (key) => {
     if (key.keyCode === 13 || key.key === 'Enter') {
         if (cellAddressBar.value !== "") {
@@ -88,7 +87,6 @@ cellAddressBar.addEventListener('keydown', (key) => {
 })
 
 // a function to focus on cell when given cell address 
-
 function focusOnCell(value) {
     let [row, col] = findRowAndCol(value);
 
@@ -103,7 +101,6 @@ function focusOnCell(value) {
 }
 
 // a function to find row and col using address value
-
 function findRowAndCol(address) {
 
     let row = String(address.slice(1));

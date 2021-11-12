@@ -36,4 +36,11 @@ deleteButton.addEventListener('click', () => {
         sheetDataBase.push(sheetRow);
     }
 
+    // focus on first cell after deletion
+    focusOnCell('A1');
+    cellAddressBar.value = `${String.fromCharCode(65)}${1}`;
+
+    // manage local storage
+    manageLocalStorage();
+
 });

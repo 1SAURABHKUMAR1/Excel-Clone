@@ -27,6 +27,9 @@ boldButton.addEventListener('click', () => {
 
     // add active to tool
     addAndRemoveActiveTool(boldButton);
+
+    // manage Local Storage
+    manageLocalStorage();
 })
 
 // italic text
@@ -45,6 +48,9 @@ italicButton.addEventListener('click', () => {
 
     // add active to tool
     addAndRemoveActiveTool(italicButton);
+
+    // manage Local Storage
+    manageLocalStorage();
 })
 
 //underline text
@@ -63,6 +69,9 @@ underlineButton.addEventListener('click', () => {
 
     // add active to tool
     addAndRemoveActiveTool(underlineButton);
+
+    // manage Local Storage
+    manageLocalStorage();
 })
 
 // background color text
@@ -75,6 +84,8 @@ backgroundColor.addEventListener('input', () => {
     //updating cell sheet db
     cellStorage.backgroundColor = backgroundColor.value;
 
+    // manage Local Storage
+    manageLocalStorage();
 })
 
 // font color text
@@ -88,6 +99,8 @@ fontColor.addEventListener('change', () => {
     // updating cell sheet db
     cellStorage.fontColor = fontColor.value;
 
+    // manage Local Storage
+    manageLocalStorage();
 })
 
 // change font size
@@ -100,6 +113,9 @@ inputFontSize.addEventListener('input', () => {
 
     // updating storage
     cellStorage.fontSize = inputFontSize.value;
+
+    // manage Local Storage
+    manageLocalStorage();
 })
 
 // change font style
@@ -113,6 +129,8 @@ inputFontStyle.addEventListener('input', () => {
     //updating the storage 
     cellStorage.fontFamily = inputFontStyle.value;
 
+    // manage Local Storage
+    manageLocalStorage();
 })
 
 // left center and right align 
@@ -128,6 +146,9 @@ alignment.forEach(element => {
 
         //updating cell storage
         cellStorage.textAlign = alignType;
+
+        // manage Local Storage
+        manageLocalStorage();
 
         if (alignType === 'left') {
             leftAlignButton.classList.add('sheet-container-active')

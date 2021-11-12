@@ -190,6 +190,8 @@ option {
   position: sticky;
   top: 2rem;
   left: 0;
+  z-index: 1;
+  max-width: 2.5rem;
 }
 
 /* container that hold cells and address of column  */
