@@ -1,6 +1,6 @@
 // download function
 function downloadFunction() {
-    let nameOfFile = fileName.value;
+    let nameOfFile = documentName;
     nameOfFile = nameOfFile.charAt(0).toUpperCase() + nameOfFile.slice(1);
 
     let downloadJson = JSON.stringify(sheetDataBase);

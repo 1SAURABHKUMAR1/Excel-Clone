@@ -88,4 +88,8 @@ for (let i = 1; i <= rowTotal; i++) {
 // sheet name
 if (localStorage.getItem('sheetName')) {
     fileName.value = localStorage.getItem('sheetName');
+    documentName = fileName.value;
+    document.title = documentName.charAt(0).toUpperCase() + documentName.slice(1);
+} else {
+    fileName.value = 'Sheet';
 }
