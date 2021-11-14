@@ -35,13 +35,32 @@ body {
   display: flex;
   align-items: center;
   padding-left: 0.7rem;
+  padding-right: 0.7rem;
   color: var(--white-text);
+  overflow: auto;
 }
 
 .navigation-single {
   padding: 0 0.7rem;
   font-size: 0.9rem;
   cursor: pointer;
+}
+
+.file-name {
+  outline: none;
+  margin-left: 0.5rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.1rem;
+  flex: 1 1;
+  max-width: 10rem;
+  height: 65%;
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-transform: capitalize;
+}
+
+.navigation-bar::-webkit-scrollbar {
+  display: none;
 }
 
 /* tool bar  */
@@ -258,6 +277,7 @@ option {
   cursor: cell;
   outline: none;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .active-cell {

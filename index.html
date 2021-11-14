@@ -23,6 +23,7 @@
         <span class="navigation-single">Insert</span>
         <span class="navigation-single">Layout</span>
         <span class="navigation-single">Help</span>
+        <input type="text" class="file-name" spellcheck="false">
     </div>
 
 
@@ -92,7 +93,12 @@
                 format_color_fill
             </span>
         </div>
-
+        <span class="material-icons-outlined download" style="font-size: 1.45rem;">
+            cloud_download
+        </span>
+        <span class="material-icons-outlined upload" style="font-size: 1.45rem;">
+            cloud_upload
+        </span>
     </div>
 
     <!-- formula and cell container  -->
@@ -105,7 +111,7 @@
             <img src="https://img.icons8.com/ios-glyphs/50/000000/formula-fx.png" />
         </span>
 
-        <input type="text" class="formula-bar">
+        <input type="text" class="formula-bar" spellcheck="false">
 
     </div>
 
@@ -149,7 +155,8 @@
     <script src="./Script/CutCopyPaste.js"></script>
     <!-- delete and clear whole sheet -->
     <script src="./Script/DeleteAndClearSheet.js"></script>
-
+    <!-- upload and download  -->
+    <script src="./Script/UploadDownload.js"></script>
 </body>
 
 </html>

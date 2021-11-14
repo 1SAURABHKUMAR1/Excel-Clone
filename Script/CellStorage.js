@@ -18,6 +18,8 @@ for (let i = 1; i <= rowTotal; i++) {
             backgroundColor: '#f9fafb',
             value: '',
             formula: '',
+            children: '', // its children means cells which are dependent on this
+            parent: '' // it is dependet on which cells
         }
         sheetRow.push(cellProperties);
     }
@@ -81,4 +83,9 @@ for (let i = 1; i <= rowTotal; i++) {
         // font size
         cell.style.fontSize = cellDB.fontSize + 'px';
     }
+}
+
+// sheet name
+if (localStorage.getItem('sheetName')) {
+    fileName.value = localStorage.getItem('sheetName');
 }

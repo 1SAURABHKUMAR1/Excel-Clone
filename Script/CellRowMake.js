@@ -1,6 +1,3 @@
-var columnTotal = 26;
-var rowTotal = 100;
-
 var rowContainer = document.querySelector('.row-address-container')
 var columnContainer = document.querySelector('.col-address-container')
 var cellsContainer = document.querySelector('.cells-container')
@@ -10,7 +7,14 @@ var copyButton = document.querySelector('.copy-button');
 var cutButton = document.querySelector('.cut-button');
 var pasteButton = document.querySelector('.paste-button');
 var deleteButton = document.querySelector('.delete-button');
+var downloadButton = document.querySelector('.download');
+var uploadButton = document.querySelector('.upload');
+var fileName = document.querySelector('.file-name');
 
+var columnTotal = 26;
+var rowTotal = 100;
+
+var documentName = 'Sheet';
 
 // function to add row numbers  
 
@@ -119,4 +123,5 @@ window.onload = function () {
 // manage local storage
 function manageLocalStorage() {
     localStorage.setItem('sheet', JSON.stringify(sheetDataBase));
+    localStorage.setItem('sheetName', documentName);
 }
