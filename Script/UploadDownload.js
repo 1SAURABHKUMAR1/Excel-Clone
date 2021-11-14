@@ -26,9 +26,6 @@ function uploadFunction() {
 
         fileReader.readAsText(files);
 
-        // filename
-        documentName = nameOfFile.slice(0, nameOfFile.length - 5);
-
         fileReader.addEventListener('load', () => {
             let sheetDB = JSON.parse(fileReader.result);
 
@@ -37,6 +34,10 @@ function uploadFunction() {
 
             // add uploaded sheet 
             sheetDataBase = sheetDB;
+
+            // filename
+            documentName = nameOfFile.slice(0, nameOfFile.length - 5);
+            fileName.value = documentName;
 
             // manageLocalStorage
             manageLocalStorage();

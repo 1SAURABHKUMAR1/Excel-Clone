@@ -40,6 +40,10 @@ deleteButton.addEventListener('click', () => {
     focusOnCell('A1');
     cellAddressBar.value = `${String.fromCharCode(65)}${1}`;
 
+    // chnange sheet name
+    documentName = 'Sheet';
+    fileName.value = documentName;
+
     // manage local storage
     manageLocalStorage();
 
