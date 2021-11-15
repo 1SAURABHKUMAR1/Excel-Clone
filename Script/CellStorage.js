@@ -18,8 +18,8 @@ for (let i = 1; i <= rowTotal; i++) {
             backgroundColor: '#f9fafb',
             value: '',
             formula: '',
-            children: '', // its children means cells which are dependent on this
-            parent: '' // it is dependet on which cells
+            children: [], // its children means cells which are dependent on this
+            parent: [] // it is dependet on which cells
         }
         sheetRow.push(cellProperties);
     }
@@ -87,9 +87,11 @@ for (let i = 1; i <= rowTotal; i++) {
 
 // sheet name
 if (localStorage.getItem('sheetName')) {
+
     fileName.value = localStorage.getItem('sheetName');
-    documentName = fileName.value;
-    document.title = documentName.charAt(0).toUpperCase() + documentName.slice(1);
-} else {
-    fileName.value = 'Sheet';
+    if (fileName.value != ' ') {
+        documentName = fileName.value;
+        document.title = documentName.charAt(0).toUpperCase() + documentName.slice(1);
+    }
+
 }

@@ -30,6 +30,8 @@ deleteButton.addEventListener('click', () => {
                 backgroundColor: '#f9fafb',
                 value: '',
                 formula: '',
+                children: [],
+                parent: []
             }
             sheetRow.push(cellProperties);
         }

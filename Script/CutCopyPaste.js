@@ -37,6 +37,8 @@ pasteButton.addEventListener('click', () => {
 
 // change title via fileName
 fileName.addEventListener('change', () => {
-    documentName = fileName.value;
-    document.title = documentName.charAt(0).toUpperCase() + documentName.slice(1);
+    if (fileName.value != '') {
+        documentName = fileName.value;
+        document.title = documentName.charAt(0).toUpperCase() + documentName.slice(1);
+    }
 })
