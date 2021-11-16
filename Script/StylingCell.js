@@ -9,6 +9,8 @@ var alignment = document.querySelectorAll('.alignment')
 var leftAlignButton = alignment[0];
 var centerAlignButton = alignment[1];
 var rightAlignButton = alignment[2];
+var backgroundColorSvg = document.querySelector('#Vector_2_background');
+var fontColorSvg = document.querySelector('#Vector_2_font');
 
 
 // bold text
@@ -84,12 +86,15 @@ backgroundColor.addEventListener('input', () => {
     //updating cell sheet db
     cellStorage.backgroundColor = backgroundColor.value;
 
+    // updating svg color
+    backgroundColorSvg.style.fill = backgroundColor.value
+
     // manage Local Storage
     manageLocalStorage();
 })
 
 // font color text
-fontColor.addEventListener('change', () => {
+fontColor.addEventListener('input', () => {
 
     let [cellUi, cellStorage] = uiAndDatabaseOfCell(cellAddressBar.value);
 
@@ -98,6 +103,9 @@ fontColor.addEventListener('change', () => {
 
     // updating cell sheet db
     cellStorage.fontColor = fontColor.value;
+
+    // updating svg color
+    fontColorSvg.style.fill = fontColor.value;
 
     // manage Local Storage
     manageLocalStorage();

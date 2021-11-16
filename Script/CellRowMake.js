@@ -101,6 +101,7 @@ function focusOnCell(value) {
 
     let cellToFocus = document.querySelector(`.cell[row="${row}"][column="${col}"]`);
     addOutlineCell(cellToFocus);
+    cellToFocus.click();
     cellToFocus.focus();
 }
 

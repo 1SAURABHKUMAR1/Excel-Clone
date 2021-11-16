@@ -1,7 +1,7 @@
 var allCells = document.querySelectorAll('.cell');
 
 //  function to chnage toolbar for every cell
-for (let i = 0; i <= allCells.length; i++) {
+for (let i = 0; i < allCells.length; i++) {
     addEventListenerToCell(allCells[i]);
 
     // function for forumla event listener
@@ -68,6 +68,11 @@ function addEventListenerToCell(cell) {
 
         // chnage formula bar for every cell
         formulaBar.value = cellStorage.formula;
+
+        // svg value
+        backgroundColorSvg.style.fill = cellStorage.backgroundColor;
+        fontColorSvg.style.fill = cellStorage.fontColor;
+
 
         // manage Local Storage
         manageLocalStorage();

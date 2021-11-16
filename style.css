@@ -38,6 +38,7 @@ body {
   padding-right: 0.7rem;
   color: var(--white-text);
   overflow: auto;
+  scrollbar-width: none;
 }
 
 .navigation-single {
@@ -76,6 +77,7 @@ body {
   overflow-x: auto;
   column-gap: 1.2rem;
   position: relative;
+  scrollbar-width: none;
 }
 
 .toolbar-container::-webkit-scrollbar {
@@ -130,6 +132,7 @@ option {
   align-items: center;
   column-gap: 1.3rem;
   overflow: scroll;
+  scrollbar-width: none;
 }
 
 .formula-and-cell-container .address-bar {
@@ -181,6 +184,7 @@ option {
   height: calc(100vh - 2rem - 6rem - 3rem);
   position: relative;
   overflow: auto;
+  scrollbar-width: thin;
 }
 
 .left-dummy-box {
