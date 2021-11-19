@@ -22,4 +22,4 @@ A excel web app clone made on vanilla javascript.
 
 # Live Link
 
-[Excel Clone](https://saurabh-project-7.netlify.app/)
+[Excel Clone](https://saurabh-excel-clone.netlify.app/)
