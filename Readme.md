@@ -6,7 +6,7 @@ A excel web app clone made on vanilla javascript.
 
 ## Tech stack used -
 
-![HTMl](https://img.icons8.com/color/48/000000/html-5--v1.png/) ![CSS](https://img.icons8.com/color/48/000000/css3.png/) ![CSS](https://img.icons8.com/color/48/000000/javascript.png/)
+![HTMl](https://img.icons8.com/color/48/000000/html-5--v1.png/) ![CSS](https://img.icons8.com/color/48/000000/css3.png/) ![JS](https://img.icons8.com/color/48/000000/javascript.png/)
 
 ## Features -
 
